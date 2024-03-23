@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes strike {
+  0% {
+    width: 0;
+    visibility: visible;
+  }
+  100% {
+    width: 100%;
+    visibility: visible;
+  }
+}
+@keyframes thanos {
+  0% {
+    left: 110%;
+    background: linear-gradient(90deg, transparent 0%, yellowgreen 5%, yellowgreen 100%);
+    width: 120%;
+    top: 0%;
+    height: 100%;
+  }
+  100% {
+    left: -20%;
+    background: linear-gradient(90deg, transparent 0%, yellowgreen 5%, yellowgreen 100%);
+    width: 120%;
+    top: 0%;
+    height: 100%;
+  }
+}
+.thanos {
+  position: relative;
+}
+
+.thanos::before {
+  content: "";
+  position: absolute;
+  left: 110%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, yellowgreen 5%, yellowgreen 100%);
+  animation: thanos 5.5s linear forwards;
+  animation-delay: 35s;
+}
+
+.strike {
+  position: relative;
+}
+
+.strike::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3%;
+  background: red;
+  visibility: hidden;
+  animation: strike 4s linear forwards, thanos 5.5s linear forwards;
+  animation-delay: 28.5s, 36s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(-30px) scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px) scale(1);
+  }
+}
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    visibility: visible;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+  }
+}
+.wu {
+  display: flex;
+  animation: fadeIn 6s;
+  width: 80vh;
+}
+.wu img {
+  position: sticky;
+  left: 0px;
+  bottom: 0px;
+  width: 80vh;
+}
+
+.mathew-0 {
+  display: flex;
+}
+.mathew-0 img {
+  position: relative;
+  overflow: hidden;
+  width: 100vh;
+  object-fit: cover;
+  visibility: hidden;
+  animation: fadeIn 6s forwards;
+  animation-delay: 9.5s;
+}
+
+.accomplishments {
+  display: block;
+}
+.accomplishments h1 {
+  position: absolute;
+  top: 2%;
+  left: 4%;
+  text-align: center;
+  font-size: 5vh;
+  visibility: hidden;
+  animation: fadeIn 6s forwards;
+  animation-delay: 12s;
+}
+.accomplishments h2 {
+  visibility: hidden;
+  animation: fadeIn 2s forwards;
+  animation-delay: 41.5s;
+  font-size: 5vh;
+}
+.accomplishments #accomplishment0 {
+  position: absolute;
+  top: 10%;
+  left: 4%;
+  text-align: center;
+  font-size: 5vh;
+  visibility: hidden;
+  animation: fadeIn 6s forwards;
+  animation-delay: 15s;
+}
+.accomplishments #accomplishment1 {
+  position: absolute;
+  top: 18%;
+  left: 4%;
+  text-align: center;
+  font-size: 5vh;
+  visibility: hidden;
+  animation: fadeIn 6s forwards;
+  animation-delay: 18s;
+}
+.accomplishments #accomplishment2 {
+  position: absolute;
+  top: 26%;
+  left: 4%;
+  text-align: center;
+  font-size: 5vh;
+  visibility: hidden;
+  animation: fadeIn 6s forwards;
+  animation-delay: 21s;
+}
+.accomplishments #accomplishment3 {
+  position: absolute;
+  top: 34%;
+  left: 4%;
+  text-align: center;
+  font-size: 5vh;
+  visibility: hidden;
+  animation: fadeIn 6s forwards;
+  animation-delay: 24.5s;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-style: normal;
+}
+body .parallax_wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+}
+body .parallax_wrapper .intro_screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .parallax_wrapper .intro_screen h1 {
+  margin-left: 3%;
+  font-weight: 600;
+  font-size: 8vh;
+  visibility: hidden;
+  animation: fadeDown 4s forwards;
+  animation-delay: 2s;
+}
+body .parallax_wrapper .intro_screen h2 {
+  margin-left: 42%;
+  font-weight: 800;
+  font-size: 6vh;
+  visibility: hidden;
+  animation: fadeRight 4s forwards;
+  animation-delay: 5s;
+}
+body .parallax_wrapper .intro_screen h3 {
+  margin-top: 5%;
+  margin-left: 25%;
+  font-weight: 100;
+  font-size: 4vh;
+  visibility: hidden;
+  animation: fadeRight 4s forwards;
+  animation-delay: 6.5s;
+}
+body .parallax_wrapper .outro_screen {
+  position: relative;
+  height: 100vh;
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .parallax_wrapper .outro_screen .fadeIn {
+  position: absolute;
+  visibility: hidden;
+  animation: fadeIn 3s forwards;
+  animation-delay: 47s;
+}
+body .parallax_wrapper .outro_screen h1 {
+  top: 5%;
+  font-size: 5vh;
+}
+body .parallax_wrapper .parallax_group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+  top: 100vh;
+}
+body .parallax_wrapper .parallax_group .parallax_layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .parallax_wrapper .parallax_group .base_layer {
+  transform: translateZ(-300px) scale(2.1);
+}
+body .parallax_wrapper .parallax_group .mid_layer {
+  transform: translateZ(0);
+}
+body .parallax_wrapper .parallax_group .top_layer {
+  transform: translateZ(210px) scale(0.3);
+}
+body .parallax_wrapper #intro {
+  z-index: 0;
+}
+body .parallax_wrapper #group-1 {
+  z-index: -1;
+}
+body .parallax_wrapper #group-2 > .mid_layer {
+  background-color: yellowgreen;
+}
+
+/*# sourceMappingURL=style.css.map */
